@@ -11,7 +11,7 @@
                 <input type="submit" class="px-7 py-2 bg-red-300 rounded hover:bg-red-200 hover:cursor-pointer" value="Delete" />
             </form>
         <h3 class="text-xl pb-4">Notes:</h3>
-        <div class="flex gap-2 flex-wrap">
+        <div class="flex gap-2 flex-wrap items-center">
             {% for note in notes %}
             <a href="{% url 'note-detail' note.pk %}">
                 <div class="border-2 rounded-lg pb-4 hover:shadow">
@@ -22,8 +22,8 @@
             </a>
             {% endfor %}
             <a href="{% url 'note-create' %}">
-                <div class="border-2 border-dashed rounded-lg hover:shadow w-48 h-48 flex justify-center items-center">
-                    <p class="min-h-32">New Note +</p>
+                <div class="border-2 border-dashed rounded-lg hover:shadow mx-auto flex justify-center items-center p-2">
+                    <p >New Note +</p>
                 </div>
             </a>
         </div>
